@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Gear Ltd. - Powering Kenya's Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-step:not(:last-child)::after {
+            content: '❯';
+            font-size: 2rem;
+            color: #0582CA;
+            margin: 0 0.5rem;
+        }
+        @media (max-width: 767px) {
+            .flow-step:not(:last-child)::after {
+                content: '▼';
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F0F8FF]">
+
+    <!-- 
+    INFOGRAPHIC PLAN & JUSTIFICATION
+
+    NARRATIVE & STRUCTURE:
+    1.  Hero Section: A bold introduction to Solar Gear Ltd. and its mission.
+    2.  Core Strengths: Combines "Who We Are" and "Why Choose Us" using high-impact cards.
+    3.  Our Solutions: Details Residential, Commercial, and Off-Grid services in a clear, icon-driven layout.
+    4.  The Solar Impact in Kenya: The primary data visualization section, using KPIs and charts to show market impact and environmental benefits.
+    5.  Proven Track Record: Visualizes key performance stats like client satisfaction and total capacity.
+    6.  Our Simple Process: A non-SVG flowchart illustrating the customer journey from consultation to support.
+    7.  Call to Action: A final, clear prompt for users to get in touch.
+
+    VISUALIZATION CHOICES:
+    * Data Point: Residential vs. Commercial Installations. Goal: Compare. Visualization: Donut Chart. Justification: Ideal for showing part-to-whole composition for a few categories. Library: Chart.js (Canvas). NO SVG.
+    * Data Point: Projected Solar Adoption Growth. Goal: Change. Visualization: Line Chart. Justification: The standard for showing trends over time. Library: Chart.js (Canvas). NO SVG.
+    * Data Point: Client Satisfaction. Goal: Inform. Visualization: Donut Chart. Justification: Visually striking way to represent a high percentage. Library: Chart.js (Canvas). NO SVG.
+    * Data Point: Process Flow. Goal: Organize. Visualization: Flow Chart. Justification: Clearly shows the customer journey stages. Method: Structured HTML/CSS with Tailwind and Unicode characters. NO SVG, NO MERMAID JS.
+    * Data Point: KPIs (CO2 offset, savings, etc.). Goal: Inform. Visualization: Single Big Number. Justification: High-impact display for key metrics. Method: Styled HTML/CSS with Tailwind. NO SVG.
+
+    COLOR PALETTE:
+    * Name: Brilliant Blues
+    * Usage: #00A6FB (Primary Accent), #0582CA (Secondary Accent), #006494 (Dark Accent), #003554 (Text), #F0F8FF (Background).
+
+    OUTPUT CONSTRAINT CONFIRMATION:
+    * NEITHER Mermaid JS NOR SVG were used in this output. All visualizations are either Chart.js on Canvas or structured HTML/CSS with Tailwind.
+    -->
+
+    <main class="text-[#003554] p-4 sm:p-6 md:p-8">
+        <div class="max-w-7xl mx-auto">
+
+            <header class="text-center py-12">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4">☀️ Solar Gear Ltd.</h1>
+                <p class="text-xl md:text-2xl text-[#006494] max-w-4xl mx-auto">Powering Kenya's Future with Reliable, Cost-Effective, and Sustainable Solar Energy Solutions.</p>
+            </header>
+
+            <section id="strengths" class="mb-16">
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#00A6FB]">
+                        <h3 class="text-2xl font-bold mb-2">Our Mission</h3>
+                        <p class="text-base text-[#003554]/90">To deliver energy independence and environmental responsibility to Kenyan homes and businesses through cutting-edge solar technology.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#00A6FB]">
+                        <h3 class="text-2xl font-bold mb-2">Quality & Reliability</h3>
+                        <p class="text-base text-[#003554]/90">We use only premium, durable components backed by a comprehensive 10-year warranty for your peace of mind.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#00A6FB]">
+                        <h3 class="text-2xl font-bold mb-2">Expertise & Support</h3>
+                        <p class="text-base text-[#003554]/90">Our NITA-certified installers ensure safe, efficient setups, with dedicated 24/7 support available for all clients.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="mb-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Core Services</h2>
+                <p class="text-lg text-[#006494] mb-12 max-w-3xl mx-auto">We provide tailored solar solutions engineered specifically for Kenyan conditions and your unique energy requirements.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">🏡</div>
+                        <h3 class="text-2xl font-bold mb-2">Residential Solar</h3>
+                        <p class="text-[#003554]/90">Custom systems for homes to ensure consistent power, reduce electricity bills, and provide battery backup for uninterrupted living.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">🏢</div>
+                        <h3 class="text-2xl font-bold mb-2">Commercial & Industrial</h3>
+                        <p class="text-[#003554]/90">Robust solutions for businesses, delivering significant energy savings, operational efficiency, and a strong return on investment.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl mb-4">🌐</div>
+                        <h3 class="text-2xl font-bold mb-2">Off-Grid Systems</h3>
+                        <p class="text-[#003554]/90">Reliable, independent power for remote locations, farms, and lodges, bringing essential electricity where the grid can't reach.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="impact" class="mb-20">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">The Solar Impact in Kenya</h2>
+                    <p class="text-lg text-[#006494] mb-12 max-w-3xl mx-auto">By choosing solar, our clients make a significant positive impact—both environmentally and financially. The data shows a clear story of growth and savings.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-12">
+                        <div>
+                            <p class="text-5xl font-extrabold text-[#00A6FB]">3,000+</p>
+                            <p class="text-lg font-semibold text-[#006494]">Tons of CO2 Offset Annually</p>
+                        </div>
+                        <div>
+                            <p class="text-5xl font-extrabold text-[#00A6FB]">800+</p>
+                            <p class="text-lg font-semibold text-[#006494]">Homes & Businesses Powered</p>
+                        </div>
+                         <div>
+                            <p class="text-5xl font-extrabold text-[#00A6FB]">KSh 1.5M</p>
+                            <p class="text-lg font-semibold text-[#006494]">Avg. Annual Commercial Savings</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div class="text-center md:text-left">
+                             <h3 class="text-2xl font-bold mb-4 text-center">Installation Portfolio Breakdown</h3>
+                            <p class="text-center text-[#003554]/90 mb-4">Our expertise spans across both residential and commercial sectors, with a strong focus on empowering individual homeowners with energy independence.</p>
+                            <div class="chart-container">
+                                <canvas id="installationsChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-bold mb-4 text-center">Projected Solar Adoption Growth</h3>
+                            <p class="text-center text-[#003554]/90 mb-4">The Kenyan market is poised for explosive growth in solar adoption over the next five years, driven by rising energy costs and a desire for reliability.</p>
+                            <div class="chart-container">
+                                <canvas id="growthChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section id="track-record" class="mb-20">
+                 <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Proven Track Record</h2>
+                    <p class="text-lg text-[#006494] mb-12 max-w-3xl mx-auto">The numbers speak for themselves. We are a trusted partner with a history of successful projects and satisfied clients.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white p-8 rounded-xl shadow-xl text-center">
+                        <h3 class="text-2xl font-bold mb-4">Client Satisfaction</h3>
+                        <p class="text-[#003554]/90 mb-4">Our commitment to quality and service is reflected in our outstanding client satisfaction rate.</p>
+                        <div class="chart-container h-64 sm:h-80">
+                            <canvas id="satisfactionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 text-center">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-4xl font-extrabold text-[#00A6FB]">10+</p>
+                            <p class="font-semibold text-[#006494]">Years in Operation</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-4xl font-extrabold text-[#00A6FB]">50+</p>
+                            <p class="font-semibold text-[#006494]">MWp Total Capacity Installed</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg col-span-2">
+                            <p class="text-4xl font-extrabold text-[#00A6FB]">120+</p>
+                            <p class="font-semibold text-[#006494]">Commercial Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="process" class="mb-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Simple Process</h2>
+                <p class="text-lg text-[#006494] mb-12 max-w-3xl mx-auto">We make going solar straightforward and hassle-free, guiding you every step of the way.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center text-center">
+                    <div class="flow-step flex flex-col md:flex-row items-center">
+                        <div class="bg-white p-6 rounded-xl shadow-lg max-w-xs">
+                            <div class="text-3xl font-bold text-[#00A6FB] mb-2">1</div>
+                            <h4 class="text-xl font-semibold">Consultation</h4>
+                            <p class="text-sm text-[#003554]/90">Free assessment of your energy needs and site.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step flex flex-col md:flex-row items-center">
+                        <div class="bg-white p-6 rounded-xl shadow-lg max-w-xs">
+                             <div class="text-3xl font-bold text-[#00A6FB] mb-2">2</div>
+                            <h4 class="text-xl font-semibold">System Design</h4>
+                            <p class="text-sm text-[#003554]/90">Custom engineering of the optimal solar solution.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step flex flex-col md:flex-row items-center">
+                        <div class="bg-white p-6 rounded-xl shadow-lg max-w-xs">
+                             <div class="text-3xl font-bold text-[#00A6FB] mb-2">3</div>
+                            <h4 class="text-xl font-semibold">Installation</h4>
+                            <p class="text-sm text-[#003554]/90">Professional setup by our NITA-certified team.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step flex flex-col md:flex-row items-center">
+                        <div class="bg-white p-6 rounded-xl shadow-lg max-w-xs">
+                             <div class="text-3xl font-bold text-[#00A6FB] mb-2">4</div>
+                            <h4 class="text-xl font-semibold">Support & Maint.</h4>
+                            <p class="text-sm text-[#003554]/90">Ongoing support and maintenance for peak performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-[#003554] text-white rounded-xl shadow-2xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Harness the Sun?</h2>
+                <p class="text-lg text-white/80 mb-8 max-w-2xl mx-auto">Contact us today for a free, no-obligation consultation and personalized quote. Let's build a brighter, sustainable future for you.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                     <a href="mailto:info@solargear.co.ke" class="bg-[#00A6FB] hover:bg-[#0582CA] text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">Email: info@solargear.co.ke</a>
+                     <a href="#" class="bg-white text-[#003554] font-bold py-3 px-8 rounded-full transition-colors duration-300">Phone: +254 (0) XXX XXX XXX</a>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const wrapLabel = (label, maxLength = 16) => {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let currentLine = '';
+                const lines = [];
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const defaultTooltipCallback = {
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: 'Inter',
+                                size: 14,
+                            }
+                        }
+                    },
+                    tooltip: {
+                        bodyFont: {
+                            family: 'Inter'
+                        },
+                        titleFont: {
+                            family: 'Inter'
+                        },
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+            const installationsCtx = document.getElementById('installationsChart');
+            if(installationsCtx) {
+                new Chart(installationsCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Residential Installations', 'Commercial Installations'].map(l => wrapLabel(l)),
+                        datasets: [{
+                            label: 'Installations',
+                            data: [680, 120],
+                            backgroundColor: ['#00A6FB', '#006494'],
+                            borderColor: '#F0F8FF',
+                            borderWidth: 4,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '60%',
+                        ...defaultTooltipCallback
+                    }
+                });
+            }
+
+            const growthCtx = document.getElementById('growthChart');
+            if(growthCtx) {
+                new Chart(growthCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2025', '2026', '2027', '2028', '2029'],
+                        datasets: [{
+                            label: 'Projected Solar Market Index',
+                            data: [100, 112, 125, 136, 145],
+                            fill: true,
+                            backgroundColor: 'rgba(0, 166, 251, 0.2)',
+                            borderColor: '#00A6FB',
+                            tension: 0.4,
+                            pointBackgroundColor: '#00A6FB',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#00A6FB',
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                           y: {
+                                beginAtZero: false,
+                                grid: {
+                                    color: '#e0e0e0'
+                                }
+                           },
+                           x: {
+                                grid: {
+                                    display: false
+                                }
+                           }
+                        },
+                        ...defaultTooltipCallback
+                    }
+                });
+            }
+
+            const satisfactionCtx = document.getElementById('satisfactionChart');
+            if(satisfactionCtx) {
+                 new Chart(satisfactionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Satisfied Clients', 'Other'].map(l => wrapLabel(l)),
+                        datasets: [{
+                            label: 'Satisfaction Rate',
+                            data: [98, 2],
+                            backgroundColor: ['#00A6FB', '#e0e0e0'],
+                             borderColor: '#fff',
+                            borderWidth: 4,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '60%',
+                         plugins: {
+                            ...defaultTooltipCallback.plugins,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
