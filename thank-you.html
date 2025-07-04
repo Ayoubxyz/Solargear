@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Solar Gear Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .fade-in { animation: fadeIn 0.8s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .bounce { animation: bounce 1s infinite; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+        .cta-button { transition: all 0.3s; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-green-50 via-white to-amber-50 min-h-screen">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-800">
+                Solar<span class="text-amber-500">Gear</span> Ltd.
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-slate-600 font-medium hover:text-amber-500 transition-colors">Home</a>
+                <a href="index.html#solutions" class="text-slate-600 font-medium hover:text-amber-500 transition-colors">Solutions</a>
+                <a href="index.html#projects" class="text-slate-600 font-medium hover:text-amber-500 transition-colors">Projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex items-center justify-center min-h-screen py-12">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <div class="max-w-2xl mx-auto">
+                
+                <!-- Success Icon -->
+                <div class="mb-8">
+                    <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto bounce">
+                        <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Main Message -->
+                <h1 class="text-4xl md:text-5xl font-bold text-green-800 mb-6">
+                    Thank You<span id="customer-name"></span>!
+                </h1>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-green-100">
+                    <h2 class="text-2xl font-semibold text-slate-800 mb-4">
+                        🌞 Your Solar Journey Begins Now!
+                    </h2>
+                    
+                    <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+                        We've received your request for a free solar quote and are excited to help you transition to clean, renewable energy. 
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+                            <h3 class="font-bold text-green-800 mb-2">📞 What Happens Next?</h3>
+                            <ul class="text-sm text-slate-600 space-y-2 text-left">
+                                <li>• Our solar expert will call you within 24 hours</li>
+                                <li>• We'll schedule a free site assessment</li>
+                                <li>• You'll receive a detailed custom quote</li>
+                                <li>• We'll discuss financing options</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-amber-50 p-6 rounded-xl border border-amber-200">
+                            <h3 class="font-bold text-amber-800 mb-2">⚡ Quick Facts</h3>
+                            <ul class="text-sm text-slate-600 space-y-2 text-left">
+                                <li>• Save up to 70% on electricity bills</li>
+                                <li>• 25-year warranty on solar panels</li>
+                                <li>• Professional installation included</li>
+                                <li>• No upfront payment options available</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8">
+                        <h3 class="font-bold text-slate-800 mb-3">📧 Confirmation Details</h3>
+                        <p class="text-sm text-slate-600">
+                            A confirmation email has been sent to <span id="customer-email" class="font-semibold text-green-700"></span>
+                        </p>
+                        <p class="text-xs text-slate-500 mt-2">
+                            Submitted on <span id="submission-time"></span>
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="index.html" class="cta-button bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg">
+                            ← Back to Home
+                        </a>
+                        <a href="index.html#calculator" class="cta-button bg-amber-500 text-white font-bold py-3 px-8 rounded-full shadow-lg">
+                            Calculate More Savings
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="mt-12 p-6 bg-white/50 backdrop-blur-sm rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-slate-800 mb-3">Need Immediate Assistance?</h3>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-slate-600">
+                        <div class="flex items-center gap-2">
+                            <span>📞</span>
+                            <a href="tel:+254722963896" class="font-semibold text-green-700 hover:text-green-800">+254 722 963 896</a>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>📧</span>
+                            <a href="mailto:info@solargear.co.ke" class="font-semibold text-green-700 hover:text-green-800">info@solargear.co.ke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Solar Gear Ltd. | Nairobi, Kenya | All Rights Reserved.</p>
+            <p class="text-sm text-slate-400 mt-2">Your Trusted Partner in Clean Energy Solutions.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get customer information from sessionStorage
+            const customerName = sessionStorage.getItem('customerName');
+            const customerEmail = sessionStorage.getItem('customerEmail');
+            
+            // Update the page with customer information
+            if (customerName) {
+                document.getElementById('customer-name').textContent = ', ' + customerName;
+            }
+            
+            if (customerEmail) {
+                document.getElementById('customer-email').textContent = customerEmail;
+            } else {
+                document.getElementById('customer-email').textContent = 'your provided email';
+            }
+            
+            // Display submission time
+            const now = new Date();
+            const timeString = now.toLocaleString('en-KE', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            document.getElementById('submission-time').textContent = timeString;
+            
+            // Clear sessionStorage after displaying (optional)
+            // sessionStorage.removeItem('customerName');
+            // sessionStorage.removeItem('customerEmail');
+        });
+    </script>
+
+</body>
+</html>
